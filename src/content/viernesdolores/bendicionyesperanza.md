@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesDeDoloresImagen/bendicionyesperanzalogo.png"
+img: "/assets/ViernesDeDoloresImagen/bendicionyesperanzalogo.png"
 title: "Hermandad de la Bendicion y Esperanza"
 date: "Fundación: 1992"
 nombrehdad: "Agrupación Parroquial Ntro. Padre Jesús de la Bendición en el Santo Encuentro y Santa María de la Esperanza en su Soledad (Sal y Luz)"
