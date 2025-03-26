@@ -1340,22 +1340,40 @@ const botones = [
 </style>
 
 <script>
-    const menuIcon = document.getElementById('menu-icon');
-    const menuItems = document.getElementById('menu-items');
+    // Función para inicializar el comportamiento del menú
+    function initializeMenu() {
+        const menuIcon = document.getElementById('menu-icon');
+        const menuItems = document.getElementById('menu-items');
 
-    // Verifica si el rango de pantalla es entre 481px y 768px
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
-
-    if (menuIcon && menuItems && mediaQuery.matches) {
-        menuIcon.addEventListener('click', () => {
-            if (menuItems.style.display === 'block') {
-                menuItems.style.display = 'none';
-            } else {
-                menuItems.style.display = 'block';
-            }
-        });
+        if (menuIcon && menuItems) {
+            menuIcon.addEventListener('click', () => {
+                // Alternar la visibilidad del menú
+                if (menuItems.style.display === 'block') {
+                    menuItems.style.display = 'none';
+                } else {
+                    menuItems.style.display = 'block';
+                }
+            });
+        }
     }
 
+    // Ejecutar la función al cargar la página
+    initializeMenu();
+
+    // Escuchar cambios en el tamaño de la pantalla para asegurarse de que el menú funcione correctamente
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    mediaQuery.addEventListener('change', (e) => {
+        if (e.matches) {
+            // Si el tamaño de la pantalla está dentro del rango, inicializar el menú
+            initializeMenu();
+        } else {
+            // Si el tamaño de la pantalla está fuera del rango, ocultar el menú
+            const menuItems = document.getElementById('menu-items');
+            if (menuItems) {
+                menuItems.style.display = 'none';
+            }
+        }
+    });
 </script>
 
 </Layout>
