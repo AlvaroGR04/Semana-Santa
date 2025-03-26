@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MadrugadaSantoImagen/losgitanoslogo.png"
+img: "/assets/MadrugadaSantoImagen/losgitanoslogo.png"
 title: "Hermandad de los Gitanos"
 date: "Fundación: 1753"
 nombrehdad: "Real, Ilustre y Fervorosa Hermandad Sacramental, Ánimas Benditas y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y María Santísima de las Angustias Coronada"

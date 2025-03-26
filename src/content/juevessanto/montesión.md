@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/JuevesSantoImagen/montensionlogo.png"
+img: "/assets/JuevesSantoImagen/montensionlogo.png"
 title: "Hermandad de Montesión"
 date: "Fundación: 1560"
 nombrehdad: "Pontificia, Real, Ilustre y Antigua Hermandad y Archicofradía de Nazarenos de la Sagrada Oración de Nuestro Señor Jesucristo en el Huerto, Santísimo Cristo de la Salud y María Santísima del Rosario en sus Misterios Dolorosos"

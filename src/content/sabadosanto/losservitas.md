@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/SabadoSantoImagen/losservitaslogo.png"
+img: "/assets/SabadoSantoImagen/losservitaslogo.png"
 title: "Hermandad de los Servitas"
 date: "Fundación: 1971"
 nombrehdad: "Real, Ilustre y Venerable Hermandad de Nazarenos y Primitiva Cofradía Servita de Nuestra Señora de los Dolores, Santísimo Cristo de la Providencia, María Santísima de la Soledad y San Marcos Evangelista"

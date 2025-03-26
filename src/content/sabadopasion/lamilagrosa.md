@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/SabadoDePasionImagen/lamilagrosalogo.png"
+img: "/assets/SabadoDePasionImagen/lamilagrosalogo.png"
 title: "Hermandad de la Milagrosa"
 date: "Fundación: 1998"
 nombrehdad: "Hermandad Sacramental, Nuestra Señora de la Medalla Milagrosa y Cofradía de Nazarenos de Nuestro Padre Jesús de la Esperanza en el Puente Cedrón, María Santísima del Rosario y San Juan Evangelista"

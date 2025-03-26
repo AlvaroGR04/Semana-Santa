@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/SabadoDePasionImagen/sanjoseobrerologo.png"
+img: "/assets/SabadoDePasionImagen/sanjoseobrerologo.png"
 title: "Hermandad de San José Obrero"
 date: "Fundación: 1960"
 nombrehdad: "Humilde y Fervorosa Hermandad Sacramental y de Gloria de San José Obrero, San Francisco de Paula e Inmaculada Concepción y Cofradía de Nazarenos de Nuestro Padre Jesús de la Caridad y Nuestra Señora de los Dolores"

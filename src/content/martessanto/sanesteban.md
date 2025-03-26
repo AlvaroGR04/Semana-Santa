@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MartesSantoImagen/sanestebanlogo.png"
+img: "/assets/MartesSantoImagen/sanestebanlogo.png"
 title: "Hermandad de San Esteban"
 date: "Fundación: 1926"
 nombrehdad: "Fervorosa Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y Buen Viaje, María Santísima Madre de los Desamparados, San Juan de Ribera y Protomártir San Esteban"

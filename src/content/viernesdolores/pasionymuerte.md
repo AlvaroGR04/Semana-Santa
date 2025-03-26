@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesDeDoloresImagen/pasionymuertelogo.png"
+img: "/assets/ViernesDeDoloresImagen/pasionymuertelogo.png"
 title: "Hermandad de la Pasión y Muerte"
 date: "Fundación: 1991"
 nombrehdad: "Hermandad de Santa María del Buen Aire y Cofradía de Nazarenos del Santísimo Cristo de Pasión y Muerte, Resurrección de Ntro. Señor y Ntra. Sra. del Desconsuelo y Visitación"

@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MiercolesSantoImagen/cristodeburgos.png"
+img: "/assets/MiercolesSantoImagen/cristodeburgos.png"
 title: "Hermandad del Cristo de Burgos"
 date: "Fundación: 1883"
 nombrehdad: "Pontificia, Real, Ilustre y Fervorosa Hermandad del Santísimo Cristo de Burgos, Negaciones y Lágrimas de San Pedro y Madre de Dios de la Palma"

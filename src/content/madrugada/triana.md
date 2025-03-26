@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MadrugadaSantoImagen/trianalogo.png"
+img: "/assets/MadrugadaSantoImagen/trianalogo.png"
 title: "Hermandad de la Esperanza de Triana"
 date: "Fundación: 1418"
 nombrehdad: "Pontificia, Real e Ilustre Hermandad y Archicofradía de Nazarenos del Santísimo Sacramento y de la Pura y Limpia Concepción de la Santísima Virgen María, Santísimo Cristo de las Tres Caídas, Nuestra Señora de la Esperanza y San Juan Evangelista"

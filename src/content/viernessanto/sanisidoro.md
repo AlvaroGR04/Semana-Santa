@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesSantoImagen/sanisidorologo.png"
+img: "/assets/ViernesSantoImagen/sanisidorologo.png"
 title: "Hermandad de San Isidoro"
 date: "Fundación: 1605"
 nombrehdad: "Antigua e Ilustre Hermandad del Santísimo Sacramento y Pontificia y Real Archicofradía de Nazarenos de Nuestro Padre Jesús de las Tres Caídas, Nuestra Señora de Loreto y Señor San Isidoro"

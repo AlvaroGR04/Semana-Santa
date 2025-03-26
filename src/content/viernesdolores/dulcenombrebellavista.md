@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesDeDoloresImagen/dulcenombrebellavistalogo.png"
+img: "/assets/ViernesDeDoloresImagen/dulcenombrebellavistalogo.png"
 title: "Hermandad del Dulce Nombre de Bellavista"
 date: "Fundación: 1992"
 nombrehdad: "Hermandad de Penitencia y Cofradía de Nazarenos de Nuestro Padre Jesús de La Salud y Remedios y María Santísima del Dulce Nombre en sus Dolores y Compasión"

@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesSantoImagen/montserratlogo.png"
+img: "/assets/ViernesSantoImagen/montserratlogo.png"
 title: "Hermandad de Montserrat"
 date: "Fundación: 1601"
 nombrehdad: "Pontificia, Real, Ilustre y Primitiva Hermandad de Nuestra Señora del Rosario y Cofradía de Nazarenos del Santísimo Cristo de la Conversión del Buen Ladrón y Nuestra Madre y Señora de Montserrat"

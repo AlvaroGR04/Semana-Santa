@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/SabadoSantoImagen/latrinidadlogo.png"
+img: "/assets/SabadoSantoImagen/latrinidadlogo.png"
 title: "Hermandad de la Trinidad"
 date: "Fundación: 1507"
 nombrehdad: "Pontificia, Real y Muy Ilustre Hermandad Sacramental y Archicofradía de Nazarenos del Sagrado Decreto de la Santísima Trinidad, Santísimo Cristo de las Cinco Llagas, María Santísima de la Esperanza Coronada y San Juan Bosco"

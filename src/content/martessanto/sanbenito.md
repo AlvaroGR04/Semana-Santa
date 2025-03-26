@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MartesSantoImagen/sanbenitologo.png"
+img: "/assets/MartesSantoImagen/sanbenitologo.png"
 title: "Hermandad de San Benito"
 date: "Fundación: 1921"
 nombrehdad: "Hermandad del Santísimo Sacramento, Pontificia, Real y Antigua Archicofradía de Nazarenos de La Sagrada Presentación de Jesús al Pueblo, Santísimo Cristo de la Sangre, Nuestra Señora de la Encarnación Coronada y San Benito Abad"

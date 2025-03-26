@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/LunesSantoImagen/rendencionlogo.png"
+img: "/assets/LunesSantoImagen/rendencionlogo.png"
 title: "Hermandad de la Redención"
 date: "Fundación: 1955"
 nombrehdad: "Real e Ilustre Hermandad del Santísimo Sacramento y Cofradía de Nazarenos de Nuestro Padre Jesús de la Redención en el Beso de Judas, María Santísima del Rocío, Nuestra Señora del Carmen, San Fernando Rey y San Lucas Evangelista."

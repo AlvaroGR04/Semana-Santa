@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MartesSantoImagen/losjaviereslogo.png"
+img: "/assets/MartesSantoImagen/losjaviereslogo.png"
 title: "Hermandad de los Javieres "
 date: "Fundación: 1946 "
 nombrehdad: "Hermandad y Cofradía de Nazarenos del Santísimo Cristo de las Almas, María Santísima de Gracia y Amparo y San Francisco Javier"

@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/DomingoDeRamosImagen/sanroquelogo.png"
+img: "/assets/DomingoDeRamosImagen/sanroquelogo.png"
 title: "Hermandad San Roque"
 date: "Fundación: 1901"
 nombrehdad: "Real, Ilustre y Fervorosa Archicofradía del Santísimo Sacramento, Pura y Limpia Concepción y Ánimas Benditas, Santísimo Cristo de San Agustín y Hermandad de Nazarenos de Nuestro Padre Jesús de las Penas y Nuestra Señora de Gracia y Esperanza"

@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesSantoImagen/lacarreterialogo.png"
+img: "/assets/ViernesSantoImagen/lacarreterialogo.png"
 title: "Hermandad de la Carreteria"
 date: "Fundación: 1550"
 nombrehdad: "Pontificia y Real Archicofradía de Nazarenos del Santísimo Cristo de la Salud, María Santísima de la Luz en el Sagrado Misterio de sus Tres Necesidades al Pie de la Santa Cruz, San Francisco de Paula, Gloriosa Resurrección de Nuestro Señor Jesucristo y Nuestra Señora del Mayor Dolor en su Soledad"

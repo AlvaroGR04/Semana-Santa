@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/LunesSantoImagen/laspenaslogo.png"
+img: "/assets/LunesSantoImagen/laspenaslogo.png"
 title: "Hermandad de las Penas"
 date: "Fundación: 1875"
 nombrehdad: "Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de las Penas y María Santísima de los Dolores."

@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/DomingoDeRamosImagen/laestrellalogo.png"
+img: "/assets/DomingoDeRamosImagen/laestrellalogo.png"
 title: "Hermandad de la Estrella"
 date: "Fundación: 1560"
 nombrehdad: "Pontificia, Real, Ilustre y Fervorosa Hermandad Sacramental y Cofradía de Nazarenos de Nuestro Padre Jesús de las Penas, María Santísima de la Estrella, Triunfo del Santo Lignum Crucis, San Francisco de Paula y Santas Justa y Rufina"

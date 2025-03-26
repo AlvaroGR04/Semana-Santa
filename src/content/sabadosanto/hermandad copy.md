@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/SabadoSantoImagen/soledaddesanlorenzologo.png"
+img: "/assets/SabadoSantoImagen/soledaddesanlorenzologo.png"
 title: "Hermandad de la Soledad de San Lorenzo "
 date: "Fundación: 1557"
 nombrehdad: "Pontificia y Real Hermandad Sacramental, Nuestra Señora de Roca Amador, Ánimas Benditas, Beato Marcelo Spínola y Primitiva Cofradía de Nazarenos de María Santísima en su Soledad"

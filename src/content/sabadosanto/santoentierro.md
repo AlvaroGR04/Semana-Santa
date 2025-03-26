@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/SabadoSantoImagen/santoentierrologo.png"
+img: "/assets/SabadoSantoImagen/santoentierrologo.png"
 title: "Hermandad del Santo Entierro"
 date: "Fundación: 1570"
 nombrehdad: "Real Hermandad Sacramental del Santo Entierro de Nuestro Señor Jesucristo, Triunfo de la Santa Cruz y María Santísima de Villaviciosa"

@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MiercolesSantoImagen/buenfinlogo.png"
+img: "/assets/MiercolesSantoImagen/buenfinlogo.png"
 title: "Hermandad del Buen Fin"
 date: "Fundación: 1593"
 nombrehdad: "Real, Ilustre, Antigua, Fervorosa y Franciscana Hermandad Sacramental y Cofradía de Nazarenos del Santo Sudario, Santísimo Cristo del Buen Fin y Nuestra Señora de la Palma"

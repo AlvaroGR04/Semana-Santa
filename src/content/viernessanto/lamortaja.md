@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesSantoImagen/lamortajalogo.png"
+img: "/assets/ViernesSantoImagen/lamortajalogo.png"
 title: "Hermandad de la Mortaja"
 date: "Fundación: Finales del siglo XVI"
 nombrehdad: "Antigua, Real e Ilustre Hermandad de Nazarenos de Nuestro Padre Jesús Descendido de la Cruz en el Misterio de su Sagrada Mortaja y María Santísima de la Piedad"

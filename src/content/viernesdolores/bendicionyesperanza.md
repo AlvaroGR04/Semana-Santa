@@ -15,7 +15,7 @@ pasos: "1 paso"
 bandas: "Música de la Cruz de Guía, Banda Jesús Nazareno de Sevilla. Fratérnitas (tras el Señor)"
 capataces: "Manuel Roldán Rojas"
 iframeURL: "https://www.google.com/maps/d/u/0/embed?mid=1fX97b3ZF0wMoZm11BDXgup_hvQsjXEg&ehbc=2E312F"
-videoURL: ""
+videoURL: "https://www.youtube.com/embed/rhRQlpHdK0Q?si=1C-h6wvJ5zAECans"
 ---
 
 <table class="recorrido" style="width: 100%; border-collapse: collapse; text-align: left; border: 1px solid black;">

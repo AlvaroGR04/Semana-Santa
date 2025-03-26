@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/LunesSantoImagen/santagenovevalogo.png"
+img: "/assets/LunesSantoImagen/santagenovevalogo.png"
 title: "Santa Genoveva"
 date: "Fundación: 1956"
 nombrehdad: "Hermandad y Cofradía de Nazarenos del Santísimo Sacramento, Nuestro Padre Jesús Cautivo en el Abandono de sus Discípulos, Nuestra Señora de las Mercedes Coronada y San Juan Evangelista en la Tercera Palabra, Inmaculada Milagrosa y Santa Genoveva"

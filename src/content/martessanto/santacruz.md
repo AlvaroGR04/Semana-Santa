@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MartesSantoImagen/santacruzlogo.png"
+img: "/assets/MartesSantoImagen/santacruzlogo.png"
 title: "Hermandad de Santa Cruz"
 date: "Fundación: 1904"
 nombrehdad: "Ilustre y Antigua Hermandad del Santísimo Sacramento y Nuestra Señora de la Paz, Fervorosa Cofradía de Nazarenos del Santísimo Cristo de las Misericordias, Santa María de la Antigua, y Nuestra Señora de los Dolore"

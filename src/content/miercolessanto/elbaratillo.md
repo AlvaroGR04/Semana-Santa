@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MiercolesSantoImagen/baratillologo.png"
+img: "/assets/MiercolesSantoImagen/baratillologo.png"
 title: "Hermandad del Baratillo"
 date: "Fundación: 1963"
 nombrehdad: "Antigua y Fervorosa Hermandad de la Santa Cruz y Cofradía de Nazarenos del Santísimo Cristo de la Misericordia y Nuestra Señora de la Piedad, Patriarca Bendito Señor San José y María Santísima de la Caridad en su Soledad"

@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/DomingoDeRamosImagen/laamarguralogo.png"
+img: "/assets/DomingoDeRamosImagen/laamarguralogo.png"
 title: "Hermandad de la Amargura"
 date: "Fundación: 1696"
 nombrehdad: "Pontificia, Real e Ilustre Hermandad Sacramental y Cofradía de Nazarenos de Nuestro Padre Jesús del Silencio en el Desprecio de Herodes, María Santísima de la Amargura, San Juan Evangelista y Santa Ángela de la Cruz"

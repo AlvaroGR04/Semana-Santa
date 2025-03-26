@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/LunesSantoImagen/elmuseologo.png"
+img: "/assets/LunesSantoImagen/elmuseologo.png"
 title: "Hermandad del Museo"
 date: "Fundación: 1575"
 nombrehdad: "Real, Ilustre y Fervorosa Hermandad del Santísimo Sacramento y Archicofradía de Nazarenos de la Sagrada Expiración de Nuestro Señor Jesucristo y María Santísima de las Aguas."

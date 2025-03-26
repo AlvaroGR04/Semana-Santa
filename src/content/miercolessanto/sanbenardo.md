@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MiercolesSantoImagen/sanbenardologo.png"
+img: "/assets/MiercolesSantoImagen/sanbenardologo.png"
 title: "Hermandad de San Benardo"
 date: "Fundación: 1763"
 nombrehdad: "Real, Ilustre y Fervorosa Hermandad Sacramental de la Pura y Limpia Concepción de la Santísima Virgen María, Ánimas Benditas del Purgatorio y Cofradía de Nazarenos del Santísimo Cristo de la Salud, María Santísima del Refugio, Santa Cruz, Nuestra Señora del Patrocinio, Santa Bárbara y San Bernardo"

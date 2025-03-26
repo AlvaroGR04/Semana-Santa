@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesDeDoloresImagen/lasmisionlogo.png"
+img: "/assets/ViernesDeDoloresImagen/lasmisionlogo.png"
 title: "Hermandad de la Mision"
 date: "Fundación: 1949"
 nombrehdad: "Archicofradía del Inmaculado Corazón de María, Hermandad Sacramental y Cofradía de Nazarenos del Santo Cristo de la Misión, Nuestra Señora del Amparo, San Juan Evangelista y San Antonio María Claret"

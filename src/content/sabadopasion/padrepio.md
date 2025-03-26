@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/SabadoDePasionImagen/padrepiologo.png"
+img: "/assets/SabadoDePasionImagen/padrepiologo.png"
 title: "Hermandad de Padre Pío"
 date: "Fundación: 1986"
 nombrehdad: "Hermandad Sacramental de la Santa Cruz en el Monte Calvario y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y Clemencia, Santísima Virgen Madre de la Divina Gracia y San Juan de la Cruz"

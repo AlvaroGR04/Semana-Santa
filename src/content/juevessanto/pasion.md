@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/JuevesSantoImagen/lapasionlogo.png"
+img: "/assets/JuevesSantoImagen/lapasionlogo.png"
 title: "Hermandad de la Pasión"
 date: "Fundación: 1535"
 nombrehdad: "Archicofradía del Santísimo Sacramento, Pontificia y Real de Nazarenos de Nuestro Padre Jesús de la Pasión y Nuestra Madre y Señora de la Merced"

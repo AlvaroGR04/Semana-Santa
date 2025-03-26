@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/JuevesSantoImagen/quintaangustialogo.png"
+img: "/assets/JuevesSantoImagen/quintaangustialogo.png"
 title: "Hermandad de la Quinta Agustia"
 date: "Fundación: Principios XVI"
 nombrehdad: "Pontificia y Real Hermandad y Archicofradía de Nazarenos del Dulce Nombre de Jesús, Sagrado Descendimiento de Nuestro Señor Jesucristo y Quinta Angustia de María Santísima Nuestra Señora"

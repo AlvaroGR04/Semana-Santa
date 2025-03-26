@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MiercolesSantoImagen/lalanzadalogo.png"
+img: "/assets/MiercolesSantoImagen/lalanzadalogo.png"
 title: "Hermandad de la Lanzada"
 date: "Fundación: 1595"
 nombrehdad: "Real, Antigua, Ilustre y Fervorosa Hermandad Sacramental, Concepción de Nuestra Señora, Santa Espina de Nuestro Señor Jesucristo, Ánimas Benditas, Nuestra Señora de la Esperanza Divina Enfermera y Cofradía de Nazarenos de la Sagrada Lanzada de Nuestro Señor Jesucristo, Nuestra Señora de Guía, San Juan Evangelista y María Santísima del Buen Fin"

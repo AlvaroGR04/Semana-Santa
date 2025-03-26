@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MadrugadaSantoImagen/lamacarenalogo.png"
+img: "/assets/MadrugadaSantoImagen/lamacarenalogo.png"
 title: "Hermandad de la Macarena"
 date: "Fundación: 1595"
 nombrehdad: "Real, Ilustre y Fervorosa Hermandad y Cofradía de Nazarenos de Nuestra Señora del Santo Rosario, Nuestro Padre Jesús de la Sentencia y María Santísima de la Esperanza Macarena"

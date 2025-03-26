@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MartesSantoImagen/losestudianteslogo.png"
+img: "/assets/MartesSantoImagen/losestudianteslogo.png"
 title: "Hermandad de los Estuidantes"
 date: "Fundación: 1924"
 nombrehdad: "Pontificia, Patriarcal e Ilustrísima Hermandad y Archicofradía de Nazarenos del Santísimo Cristo de la Buena Muerte y María Santísima de la Angustia"

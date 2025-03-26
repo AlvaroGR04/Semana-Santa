@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MadrugadaSantoImagen/elsilenciologo.png"
+img: "/assets/MadrugadaSantoImagen/elsilenciologo.png"
 title: "Hermandad del Silencio"
 date: "Fundación: 1340"
 nombrehdad: "Primitiva Hermandad de los Nazarenos de Sevilla, Archicofradía Pontificia y Real de Nuestro Padre Jesús Nazareno, Santa Cruz en Jerusalén y María Santísima de la Concepción"

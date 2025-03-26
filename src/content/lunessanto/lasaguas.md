@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/LunesSantoImagen/lasaguaslogo.png"
+img: "/assets/LunesSantoImagen/lasaguaslogo.png"
 title: "Hermandad de las Aguas"
 date: "Fundación: 1750"
 nombrehdad: "Real, Antigua, Ilustre y Fervorosa Hermandad de la Santa Cruz y Nuestra Señora del Rosario y Archicofradía de Nazarenos del Santísimo Cristo de las Aguas, Nuestra Madre y Señora del Mayor Dolor y María Santísima de Guadalupe."

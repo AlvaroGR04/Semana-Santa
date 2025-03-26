@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/LunesSantoImagen/veracruzlogo.png"
+img: "/assets/LunesSantoImagen/veracruzlogo.png"
 title: "Hermandad de la Vera Cruz"
 date: "Fundación: 1448"
 nombrehdad: "Muy Antigua, Siempre Ilustre, Venerable, Pontificia, Real, Fervorosa, Humilde y Seráfica Hermandad y Archicofradía de Nazarenos de la Santísima Vera- Cruz, Sangre de Nuestro Señor Jesucristo y Tristezas de María Santísima"

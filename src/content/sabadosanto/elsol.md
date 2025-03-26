@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/SabadoSantoImagen/elsollogo.png"
+img: "/assets/SabadoSantoImagen/elsollogo.png"
 title: "Hermandad del Sol"
 date: "Fundación: 1932"
 nombrehdad: "Fervorosa y Mariana Hermandad del Santísimo Sacramento y Cofradía de Nazarenos del Triunfo de la Santa Cruz, Santo Cristo Varón de Dolores de la Divina Misericordia, Nuestra Señora del Sol y San Juan Evangelista"

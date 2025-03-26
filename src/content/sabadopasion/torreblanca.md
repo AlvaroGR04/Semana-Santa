@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/SabadoDePasionImagen/torreblancalogo.png"
+img: "/assets/SabadoDePasionImagen/torreblancalogo.png"
 title: "Hermandad de Torreblanca"
 date: "Fundación: 1992"
 nombrehdad: "Humilde y Fervorosa Hermandad Sacramental del Stmo. Nombre de Jesús y Cofradía de Nazarenos de Ntro. Padre Jesús Cautivo ante Pilato, María Stma. de los Dolores y San Antonio de Padua"

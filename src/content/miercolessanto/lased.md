@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MiercolesSantoImagen/lasedlogo.png"
+img: "/assets/MiercolesSantoImagen/lasedlogo.png"
 title: "Hermandad de la Sed"
 date: "Fundación: 1969"
 nombrehdad: "Hermandad Sacramental de Congregantes de la Inmaculada Concepción y Cofradía de Nazarenos del Santísimo Cristo de la Sed y Santa María de Consolación Madre de la Iglesia"

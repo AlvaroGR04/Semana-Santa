@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/SabadoDePasionImagen/divinoperdonalcosalogo.png"
+img: "/assets/SabadoDePasionImagen/divinoperdonalcosalogo.png"
 title: "Hermandad del Divino Perdón"
 date: "Fundación: 1992"
 nombrehdad: "Franciscana Hermandad de Penitencia y Cofradía de Nazarenos de María Santísima de la Purísima Concepción, Santo Cáliz de Ntro. Padre Jesús del Divino Perdón y Beata Ana María de Javouhey"

@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesSantoImagen/soledaddelasanbuenaventuralogo.png"
+img: "/assets/ViernesSantoImagen/soledaddelasanbuenaventuralogo.png"
 title: "Hermandad de la Soledad de San Buenaventura"
 date: "Fundación: 1847"
 nombrehdad: "Real, Ilustre y Franciscana Hermandad y Cofradía de Nazarenos de la Santa Cruz en el Monte Calvario, Santísimo Cristo de las Salvación y Nuestra Señora de la Soledad"

@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MadrugadaSantoImagen/elcalvariologo.png"
+img: "/assets/MadrugadaSantoImagen/elcalvariologo.png"
 title: "Hermandad del Calvario"
 date: "Fundación: 1572"
 nombrehdad: "Pontificia y Real Hermandad y Cofradía de Nazarenos del Santísimo Cristo del Calvario y Nuestra Señora de la Presentación"

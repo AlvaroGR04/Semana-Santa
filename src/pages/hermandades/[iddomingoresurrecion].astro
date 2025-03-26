@@ -30,17 +30,17 @@ export async function getStaticPaths() {
 
 // Datos de los botones
 const botones = [
-    { nombre: "VIERNES DE DOLORES", texto: "", imagen: "../../public/assets/viernesdolores.jpg", url: "/viernes-dolores" },
-    { nombre: "SABADO DE PASION", texto: "", imagen: "../../public/assets/sabadopasion.jpg", url: "/sabado-pasion" },
-    { nombre: "DOMINGO DE RAMOS", texto: "", imagen: "../../public/assets/domingoramos.jpg", url: "/domingo-ramos" },
-    { nombre: "LUNES SANTO", texto: "", imagen: "../../public/assets/lunesanto.jpg", url: "/lunes-santo" },
-    { nombre: "MARTES SANTO", texto: "", imagen: "../../public/assets/martessanto.jpg", url: "/martes-santo" },
-    { nombre: "MIERCOLES SANTO", texto: "", imagen: "../../public/assets/miercolessanto.jpg", url: "/miercoles-santo" },
-    { nombre: "JUEVES SANTO", texto: "", imagen: "../../public/assets/juevessanto.jpg", url: "/jueves-santo" },
-    { nombre: "MADRUGADA", texto: "", imagen: "../../public/assets/madrugada.jpg", url: "/madrugada" },
-    { nombre: "VIERNES SANTO", texto: "", imagen: "../../public/assets/viernessanto.jpg", url: "/viernes-santo" },
-    { nombre: "SABADO SANTO", texto: "", imagen: "../../public/assets/sabadosanto_resurrecion.jpg", url: "/sabado-santo" },
-    { nombre: "DOMINGO DE RESURRECCION", texto: "", imagen: "../../public/assets/sabadosanto_resurrecion.jpg", url: "/domingo-resurrecion" }
+    { nombre: "VIERNES DE DOLORES", texto: "", imagen: "/assets/viernesdolores.jpg", url: "/viernes-dolores" },
+    { nombre: "SABADO DE PASION", texto: "", imagen: "/assets/sabadopasion.jpg", url: "/sabado-pasion" },
+    { nombre: "DOMINGO DE RAMOS", texto: "", imagen: "/assets/domingoramos.jpg", url: "/domingo-ramos" },
+    { nombre: "LUNES SANTO", texto: "", imagen: "/assets/lunesanto.jpg", url: "/lunes-santo" },
+    { nombre: "MARTES SANTO", texto: "", imagen: "/assets/martessanto.jpg", url: "/martes-santo" },
+    { nombre: "MIERCOLES SANTO", texto: "", imagen: "/assets/miercolessanto.jpg", url: "/miercoles-santo" },
+    { nombre: "JUEVES SANTO", texto: "", imagen: "/assets/juevessanto.jpg", url: "/jueves-santo" },
+    { nombre: "MADRUGADA", texto: "", imagen: "/assets/madrugada.jpg", url: "/madrugada" },
+    { nombre: "VIERNES SANTO", texto: "", imagen: "/assets/viernessanto.jpg", url: "/viernes-santo" },
+    { nombre: "SABADO SANTO", texto: "", imagen: "/assets/sabadosanto_resurrecion.jpg", url: "/sabado-santo" },
+    { nombre: "DOMINGO DE RESURRECCION", texto: "", imagen: "/assets/sabadosanto_resurrecion.jpg", url: "/domingo-resurrecion" }
 ];
 ---
 
@@ -114,13 +114,13 @@ const botones = [
             <p>La Hermandad a la que describimos en esta pagina es: <strong>{title}</strong></p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/álvaro-gallardo-rodríguez-314aa9329/" target="_blank" aria-label="LinkedIn">
-                    <img src="../../../public/assets/perfil/linkedin.svg" alt="LinkedIn" />
+                    <img src="/assets/perfil/linkedin.svg" alt="LinkedIn" />
                 </a>
                 <a href="https://www.instagram.com/alvarogr.04/" target="_blank" aria-label="Instagram">
-                    <img src="../../../public/assets/perfil/instagram.svg" alt="Instagram" />
+                    <img src="/assets/perfil/instagram.svg" alt="Instagram" />
                 </a>
                 <a href="https://x.com/AlvaroGR04" target="_blank" aria-label="Twitter">
-                    <img src="../../../public/assets/perfil/x.svg" alt="Twitter" />
+                    <img src="/assets/perfil/x.svg" alt="Twitter" />
                 </a>
             </div>
         </div>

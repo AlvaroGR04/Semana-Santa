@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/DomingoDeRamosImagen/lahiniesta.png"
+img: "/assets/DomingoDeRamosImagen/lahiniesta.png"
 title: "Hermandad de la Hiniesta"
 date: "Fundación: 1560. Refundada en 1879"
 nombrehdad: "Real e Ilustre Hermandad Sacramental de la Inmaculada Concepción y Primitiva y Franciscana Cofradía de Nazarenos del Santísimo Cristo de la Buena Muerte, Santa María Magdalena y Nuestra Señora de la Hiniesta Dolorosa y Gloriosa Coronada"

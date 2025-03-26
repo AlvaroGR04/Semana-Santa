@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/LunesSantoImagen/sangonzalologo.png"
+img: "/assets/LunesSantoImagen/sangonzalologo.png"
 title: "Hermandad de San Gonzalo"
 date: "Fundación: 1942"
 nombrehdad: "Pontificia y Real Hermandad del Santísimo Sacramento y Cofradía de Nazarenos de Nuestro Padre Jesús en su Soberano Poder ante Caifás, Nuestra Señora de la Salud y San Juan Evangelista"

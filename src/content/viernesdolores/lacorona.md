@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesDeDoloresImagen/lacoronalogo.png"
+img: "/assets/ViernesDeDoloresImagen/lacoronalogo.png"
 title: "Hermandad de la Corona"
 date: "Fundación: 1340"
 nombrehdad: "Hermandad del Santísimo Cristo de la Corona y Nuestra Señora del Rosario"

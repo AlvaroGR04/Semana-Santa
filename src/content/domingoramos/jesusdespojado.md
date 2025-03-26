@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/DomingoDeRamosImagen/jesusdespojadologo.png"
+img: "/assets/DomingoDeRamosImagen/jesusdespojadologo.png"
 title: "Hermandad Jesús Despojado"
 date: "Fundación: 1936"
 nombrehdad: "Humilde y Fervorosa Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús Despojado de sus Vestiduras, María Santísima de los Dolores y Misericordia, Mayor Dolor de Nuestra Señora, San Juan Evangelista y San Bartolomé Apóstol"

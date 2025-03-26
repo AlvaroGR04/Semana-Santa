@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/JuevesSantoImagen/elvallelogo.png"
+img: "/assets/JuevesSantoImagen/elvallelogo.png"
 title: "Hermandad del Valle"
 date: "Fundación: 1590"
 nombrehdad: "Pontificia Real, Ilustre y Primitiva Archicofradía de Nazarenos del Santísimo Cristo de la Coronación de Espinas, Nuestro Padre Jesús con la Cruz al Hombro, Nuestra Señora del Valle y Santa Mujer Verónica"

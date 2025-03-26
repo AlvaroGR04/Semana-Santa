@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MartesSantoImagen/Cerrodelaguilalogo.png"
+img: "/assets/MartesSantoImagen/Cerrodelaguilalogo.png"
 title: "Hermandad del Cerro del Alguila"
 date: "Fundación: 1945"
 nombrehdad: "Fervorosa Hermandad Sacramental y Cofradía de Nazarenos del Santísimo Cristo del Desamparo y Abandono, Nuestro Padre Jesús de la Humildad y Nuestra Señora de los Dolores"

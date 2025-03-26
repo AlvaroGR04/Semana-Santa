@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/SabadoDePasionImagen/lahumildadlogo.png"
+img: "/assets/SabadoDePasionImagen/lahumildadlogo.png"
 title: "Hermandad de la Humildad"
 date: "Fundación: 2008"
 nombrehdad: "Agrupación Parroquial de Ntro. Padre Jesús de la Humildad, Ntra. Sra. de los Ángeles y Santa Ángela de la Cruz."

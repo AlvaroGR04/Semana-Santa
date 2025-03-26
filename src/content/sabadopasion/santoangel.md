@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/SabadoDePasionImagen/santoangellogo.png"
+img: "/assets/SabadoDePasionImagen/santoangellogo.png"
 title: "Hermandad del Santo Ángel"
 date: "Fundación: 2024"
 nombrehdad: "Santísimo Cristo de los Desamparados, María Santísima de la Salud, Santo Lignum Crucis, San Juan de la Cruz y Santo Ángel Custodio"

@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesSantoImagen/elcachorrologo.png"
+img: "/assets/ViernesSantoImagen/elcachorrologo.png"
 title: "Hermandad del Cachorro"
 date: "Fundación: 1689"
 nombrehdad: "Pontificia Real e Ilustre Hermandad del Santísimo Cristo de la Expiración y Nuestra Madre y Señora del Patrocinio"

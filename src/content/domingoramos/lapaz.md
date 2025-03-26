@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/DomingoDeRamosImagen/lapazlogo.png"
+img: "/assets/DomingoDeRamosImagen/lapazlogo.png"
 title: "Hermandad de la Paz"
 date: "Fundación: 1939"
 nombrehdad: "Fervorosa Hermandad Sacramental del Señor San Sebastián y Nuestra Señora del Prado y Cofradía de Nazarenos de Nuestro Padre Jesús de la Victoria y María Santísima de la Paz"

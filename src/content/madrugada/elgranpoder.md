@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MadrugadaSantoImagen/elgranpoderlogo.png"
+img: "/assets/MadrugadaSantoImagen/elgranpoderlogo.png"
 title: "Hermandad del Gran Poder"
 date: "Fundación: 1431"
 nombrehdad: "Pontificia y Real Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús del Gran Poder y María Santísima del Mayor Dolor y Traspaso"

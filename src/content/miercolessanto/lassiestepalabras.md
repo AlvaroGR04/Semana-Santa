@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MiercolesSantoImagen/sietepalabras.png"
+img: "/assets/MiercolesSantoImagen/sietepalabras.png"
 title: "Hermandad de las Siete Palabras"
 date: "Fundación: 1858"
 nombrehdad: "Real e Ilustre Hermandad Sacramental de Nuestra Señora del Rosario, Ánimas Benditas del Purgatorio y Primitiva Archicofradía del Sagrado Corazón y Clavos de Jesús, Nuestro Padre Jesús de la Divina Misericordia, Santísimo Cristo de las Siete Palabras, María Santísima de los Remedios, Nuestra Señora de la Cabeza"

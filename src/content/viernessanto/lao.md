@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesSantoImagen/laologo.png"
+img: "/assets/ViernesSantoImagen/laologo.png"
 title: "Hermandad de la O"
 date: "Fundación: 1566"
 nombrehdad: "Pontificia Real e Ilustre Archicofradía del Santísimo Sacramento, Nuestro Padre Jesús Nazareno y María Santísima de la O"

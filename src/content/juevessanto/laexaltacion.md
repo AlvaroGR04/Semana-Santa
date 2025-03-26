@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/JuevesSantoImagen/laexaltacionlogo.png"
+img: "/assets/JuevesSantoImagen/laexaltacionlogo.png"
 title: "Hermandad de la Exaltación"
 date: "Fundación: Siglo XVI"
 nombrehdad: "Pontificia, Real e Ilustre Hermandad Sacramental, Purísima Concepción, Ánimas Benditas del Purgatorio, San Sebastián Mártir y Archicofradía de Nazarenos del Santísimo Cristo de la Exaltación y Nuestra Señora de las Lágrimas"

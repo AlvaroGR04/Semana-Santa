@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MiercolesSantoImagen/lospanaderoslogo.png"
+img: "/assets/MiercolesSantoImagen/lospanaderoslogo.png"
 title: "Hermandad de los Panaderos"
 date: "Fundación: Finales XVI"
 nombrehdad: "Pontificia, Real, Ilustre y Fervorosa Hermandad del Santísimo Cristo de Burgos, Negaciones y Lágrimas de San Pedro y Pontificia, Real, Ilustre y Fervorosa Hermandad y Archicofradía de Nazarenos de Nuestro Padre Jesús del Soberano Poder en su Prendimiento, María Santísima de Regla y San Andrés Apóstol"

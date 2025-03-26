@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MiercolesSantoImagen/carmendolorosologo.png"
+img: "/assets/MiercolesSantoImagen/carmendolorosologo.png"
 title: "Hermandad del Carmen"
 date: "Fundación: 1982"
 nombrehdad: "Hermandad Carmelita de las Maravillas de María y Cofradía de Nazarenos de Ntro. Padre Jesús de la Paz y Ntra. Sra. del Carmen en sus Misterios Dolorosos"

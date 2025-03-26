@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MartesSantoImagen/lacandelariapng.png"
+img: "/assets/MartesSantoImagen/lacandelariapng.png"
 title: "Hermandad de la Candelaria"
 date: "Fundación: 1921"
 nombrehdad: "Ilustre y Fervorosa Hermandad Sacramental y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud, María Santísima de la Candelaria y Nuestra Señora del Subterráneo y Señor San Nicolás de Bari"

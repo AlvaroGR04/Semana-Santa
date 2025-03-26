@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/JuevesSantoImagen/lascigarreraslogo.png"
+img: "/assets/JuevesSantoImagen/lascigarreraslogo.png"
 title: "Hermandad de las Cigarreras"
 date: "Fundación: 1569"
 nombrehdad: "Real e Ilustre Hermandad y Cofradía de Nazarenos de la Sagrada Columna y Azotes de Nuestro Señor Jesucristo y María Santísima de la Victoria"

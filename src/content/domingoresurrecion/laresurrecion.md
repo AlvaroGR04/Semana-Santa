@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/DomingoDeResureccionImagen/laresurrecionlogo.png"
+img: "/assets/DomingoDeResureccionImagen/laresurrecionlogo.png"
 title: "Hermandad de la Resurreción"
 date: "Fundación: 1969"
 nombrehdad: "Ilustre y Lasaliana Hermandad Sacramental de la Santa Cruz y Cofradía de Nazarenos de la Sagrada Resurrección de Nuestro Señor Jesucristo, Nuestra Señora de la Aurora y San Juan Bautista de la Salle"

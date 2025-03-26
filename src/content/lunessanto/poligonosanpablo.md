@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/LunesSantoImagen/sanpablologo.png"
+img: "/assets/LunesSantoImagen/sanpablologo.png"
 title: "El Poligono de San Pablo"
 date: "Fundación: 1979"
 nombrehdad: "Fervorosa y Trinitaria Hermandad del Santísimo Sacramento y Cofradía de Nazarenos de Nuestro Padre Jesús Cautivo y Rescatado, Nuestra Señora del Rosario Doloroso, San Juan de Mata y San Ignacio de Loyola"

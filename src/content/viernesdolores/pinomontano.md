@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/ViernesDeDoloresImagen/pinomontanologo.png"
+img: "/assets/ViernesDeDoloresImagen/pinomontanologo.png"
 title: "Hermandad de Pino Montano"
 date: "Fundación: 1982"
 nombrehdad: "Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de Nazaret, María Santísima del Amor, San Marcos Evangelista y San Isidro Labrador"

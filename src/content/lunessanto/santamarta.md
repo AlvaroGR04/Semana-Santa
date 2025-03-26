@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/LunesSantoImagen/santamartalogo.png"
+img: "/assets/LunesSantoImagen/santamartalogo.png"
 title: "Hermandad de Santa Marta"
 date: "Fundación: 1946"
 nombrehdad: "Real, Muy Ilustre y Venerable Hermandad del Santísimo Sacramento, Inmaculada Concepción, Ánimas Benditas y Cofradía de Nazarenos del Santísimo Cristo de la Caridad en su Traslado al Sepulcro, Nuestra Señora de las Penas y Santa Marta "

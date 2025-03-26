@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/DomingoDeRamosImagen/lacenalogo.png"
+img: "/assets/DomingoDeRamosImagen/lacenalogo.png"
 title: "Hermandad de la Sagrada Cena"
 date: "Fundación: 1580"
 nombrehdad: "Antigua, Real, Ilustre y Fervorosa Hermandad Sacramental, Esclavitud de Nuestra Señora de la Encarnación y Cofradía de Nazarenos de la Sagrada Cena, Santísimo Cristo de la Humildad y Paciencia y Nuestra Señora del Subterráneo Reina de Cielos y Tierra"

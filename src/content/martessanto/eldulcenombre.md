@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/MartesSantoImagen/dulcenombre.png"
+img: "/assets/MartesSantoImagen/dulcenombre.png"
 title: "Hermandad del Dulce Nombre"
 date: "Fundación: 1945"
 nombrehdad: "Pontificia, Fervorosa, Ilustre y Antigua Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús ante Anás, Santo Cristo del Mayor Dolor, María Santísima del Dulce Nombre y San Juan Evangelista"

@@ -1,5 +1,5 @@
 ---
-img: "../../../public/assets/JuevesSantoImagen/losnegritoslogo.png"
+img: "/assets/JuevesSantoImagen/losnegritoslogo.png"
 title: "Hermandad de los Negritos"
 date: "Fundación: 1393"
 nombrehdad: "Pontificia y Franciscana Hermandad y Cofradía de Nazarenos del Santísimo Cristo de la Fundación y Nuestra Señora de los Ángeles"
