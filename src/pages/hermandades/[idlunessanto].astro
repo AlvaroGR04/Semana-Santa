@@ -1,0 +1,1361 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import background from '../../assets/background.svg';
+
+// Obtener todas las hermandades del Lunes Santo
+const hermandades = await getCollection('lunessanto');
+console.log(hermandades);
+// Obtener el id de la URL
+const { idlunessanto } = Astro.params;
+
+// Buscar la hermandad por id
+const hermandad = hermandades.find((h) => h.id === idlunessanto);
+
+if (!hermandad) {
+    throw new Error(`No se encontró la hermandad con id: ${idlunessanto}`);
+}
+
+// Extraer los datos
+const { title, img, iglesia, nombrehdad, descripcion, hermanos, nazarenos, tiempo_en_ver, tiempo_recorrido, pasos, bandas, capataces, iframeURL,videoURL } = hermandad.data;
+
+// 💡 IMPORTANTE: Añadir la función getStaticPaths
+export async function getStaticPaths() {
+    const hermandades = await getCollection('lunessanto');
+
+    return hermandades.map((h) => ({
+        params: { idlunessanto: h.id }, // Genera una ruta por cada hermandad del lunes santo
+    }));
+}
+
+// Datos de los botones
+const botones = [
+    { nombre: "VIERNES DE DOLORES", texto: "", imagen: "../../public/assets/viernesdolores.jpg", url: "/viernes-dolores" },
+    { nombre: "SABADO DE PASION", texto: "", imagen: "../../public/assets/sabadopasion.jpg", url: "/sabado-pasion" },
+    { nombre: "DOMINGO DE RAMOS", texto: "", imagen: "../../public/assets/domingoramos.jpg", url: "/domingo-ramos" },
+    { nombre: "LUNES SANTO", texto: "", imagen: "../../public/assets/lunesanto.jpg", url: "/lunes-santo" },
+    { nombre: "MARTES SANTO", texto: "", imagen: "../../public/assets/martessanto.jpg", url: "/martes-santo" },
+    { nombre: "MIERCOLES SANTO", texto: "", imagen: "../../public/assets/miercolessanto.jpg", url: "/miercoles-santo" },
+    { nombre: "JUEVES SANTO", texto: "", imagen: "../../public/assets/juevessanto.jpg", url: "/jueves-santo" },
+    { nombre: "MADRUGADA", texto: "", imagen: "../../public/assets/madrugada.jpg", url: "/madrugada" },
+    { nombre: "VIERNES SANTO", texto: "", imagen: "../../public/assets/viernessanto.jpg", url: "/viernes-santo" },
+    { nombre: "SABADO SANTO", texto: "", imagen: "../../public/assets/sabadosanto_resurrecion.jpg", url: "/sabado-santo" },
+    { nombre: "DOMINGO DE RESURRECCION", texto: "", imagen: "../../public/assets/sabadosanto_resurrecion.jpg", url: "/domingo-resurrecion" }
+];
+---
+
+<Layout title={title}>
+    <img id="background" src={background.src} alt="" fetchpriority="high" />
+    <div id="titulo">
+        <header>
+            <section id="botones">
+                <div id="menu-icon" aria-label="Abrir menú">
+                    ☰ DIAS DE LA SEMANA SANTA
+                </div>
+                <div id="menu-items">
+                    {botones && botones.length > 0 && (
+                        botones.map((boton, index) => (
+                            <a class="button" href={boton.url ?? '#'} id={`boton-${index}`}>
+                                {boton.nombre ?? 'Botón'}
+                            </a>
+                        ))
+                    )}
+                </div>
+            </section>           
+        </header>
+    </div>
+        
+    <div id="hdad">
+        <img
+            transition:name={`img-${img}$`}
+            src={img} 
+            alt={title} 
+            class="logo" 
+        />
+        <div id="descripcion">
+            <h1>{title}</h1>
+            <h3>{iglesia}</h3>
+        </div>
+    </div>
+
+    <section>
+        <div id="informe">
+            
+            <div class="info">
+                <div class="titulohdad">
+                    <p><strong>{nombrehdad}</strong></p>
+                </div>
+                <p>{descripcion}</p>
+                <p><strong>Datos sobre la hermandad</strong></p>
+                <p>Cuenta aproximadamente con <strong>{hermanos} hermanos </strong> esta hermandad</p>
+                <p>Actualmente cuenta con unos <strong>{nazarenos}</strong></p>
+                <p>La cofradia se tarda en ver completamente alrededor de <strong>{tiempo_en_ver}</strong></p>
+                <p>El tiempo que recorre es de aproximadamente <strong>{tiempo_recorrido}</strong></p>
+                <p>Esta hermandad tiene <strong>{pasos}</strong></p>
+                <p>Las bandas que llevan son <strong>{bandas}</strong></p>
+                <p>El capataz o los capataces son <strong>{capataces}</strong></p>
+            </div>
+            <div class="recorrido" set:html={hermandad.body}></div>
+        </div>
+
+        <div id="informe2">
+            <div id="recuadromapa">
+                <iframe id="mapa" src={iframeURL} width="99%" height="99%"></iframe>
+            </div>
+            <div class="video">
+                <iframe width="560" height="315" src={videoURL} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>    
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <p>Desarrollado por <strong>Álvaro Gallardo Rodríguez</strong></p>
+            <p>La Hermandad a la que describimos en esta pagina es: <strong>{title}</strong></p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/álvaro-gallardo-rodríguez-314aa9329/" target="_blank" aria-label="LinkedIn">
+                    <img src="../../../public/assets/perfil/linkedin.svg" alt="LinkedIn" />
+                </a>
+                <a href="https://www.instagram.com/alvarogr.04/" target="_blank" aria-label="Instagram">
+                    <img src="../../../public/assets/perfil/instagram.svg" alt="Instagram" />
+                </a>
+                <a href="https://x.com/AlvaroGR04" target="_blank" aria-label="Twitter">
+                    <img src="../../../public/assets/perfil/x.svg" alt="Twitter" />
+                </a>
+            </div>
+        </div>
+    </footer>
+
+<style>
+    #background {
+        background-color: #2e0b37;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+@media (min-width: 1201px) {
+    /* Diseño para pantallas muy grandes */
+    #titulo {
+        color: #2e0b37;
+        font-weight: bolder;
+        overflow: visible;
+        width: 80%;
+        max-width: 1450px;
+        border-radius: 100px;
+        font-family: 'Dalfitra';
+        font-size: 85%;
+        position: fixed;
+        padding: 2.3% 2.3% 2.3% 20.8%;
+        z-index: 999;
+    }
+
+    #menu-icon {
+        display: none; /* Oculta el ícono del menú */
+    }
+
+    #menu-items {
+        display: grid; /* Muestra los botones en un diseño de cuadrícula */
+        grid-template-columns: repeat(11,1fr); /* 11 columnas */
+        padding: 0.5% 3% 0.5% 5%;
+        gap: 1%; /* Espaciado entre los botones */
+    }
+
+    #botones{
+        max-width: 98%;
+        background-color: #e5a000;
+        border-radius: 50px; 
+    }
+
+    #botones a.button {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-family: 'Dalfitra';
+        font-weight: bolder;
+        font-size: 120%;
+        color: #2e0b37;
+        max-width: 100%;
+        margin: 2% 3% 2% 3%;
+        text-decoration: none;
+        border-radius: 5% 5%;
+    }
+
+    #botones a.button:hover {
+        background-color: #ffbf47;
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+        filter: brightness(1.2);
+    }
+
+    #hdad {
+        display: flex;
+        align-items: center;
+        overflow: visible; /* Evita restricciones */
+        background-color: #2e0b37;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 1);
+        border-radius: 50px; 
+        position: fixed;
+        top: 0;
+        width: 90%; 
+        max-width: 20%; 
+        padding: 0% 1%; 
+        margin: 1% 1%;
+        z-index: 999;
+    }
+
+    .logo {
+        max-width: 23%;
+        height: auto;
+        margin-right: 5%; 
+    }
+
+    #descripcion{
+        color: #e5a000;
+        font-size: 70%;
+        font-weight: bold;
+        padding: 1%;
+        border-radius: 20%; 
+        max-width: 70%; 
+    }
+
+    #informe {
+        display: flex;
+        color: #e5a000;
+        padding: 8% 15px 15px 15px;
+        gap: 20px; /* Espaciado entre las columnas */
+    }
+
+    .info {
+        flex: 2; /* Ocupa más espacio (2 partes) */
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        padding: 15px;
+    }
+
+    .titulohdad{
+        font-size:180%;
+    }
+
+    .recorrido {
+        flex: 1; /* Ocupa menos espacio (1 parte) */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente los elementos */
+        align-items: center; /* Centra horizontalmente los elementos */
+        text-align: center; /* Asegura que el texto esté centrado */
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px ;
+    }  
+
+    #informe2 {
+        display: flex; /* Configura un diseño en fila */
+        justify-content: space-between; /* Espacia los elementos uniformemente */
+        align-items: center; /* Centra verticalmente los elementos */
+        gap: 20px; /* Espaciado entre los elementos */
+        padding: 20px;
+    }
+
+    #recuadromapa {
+        background-color: #2e0b37;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+        height: 810px;
+        width: 48%; /* Ajusta el ancho para que ocupe menos espacio */
+        border-radius: 2%;
+    }
+
+    #mapa {
+        margin: 0.5%;
+        border-radius: 2%;
+    }
+
+    .video {
+        display: flex; /* Habilita flexbox para centrar el contenido */
+        justify-content: center; /* Centra horizontalmente el iframe */
+        align-items: center; /* Centra verticalmente el iframe */
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        height: 600px; /* Igual altura que el mapa */
+        width: 70%; /* Ajusta el ancho para que ocupe menos espacio */
+        border-radius: 2%;
+        padding: 6px; /* Espaciado interno */
+    }
+
+    .video iframe {
+        width: 100%; /* Ajusta el ancho del iframe */
+        height: 100%; /* Ajusta la altura del iframe */
+        border-radius: 1%;
+    }
+
+    #footer {
+        background-color: #2e0b37; /* Color de fondo del footer */
+        color: #e5a000; /* Color del texto */
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        border-top: 2px solid #e5a000;
+    }
+
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .footer-content p {
+        margin: 10px 0; /* Espaciado entre líneas */
+        font-size: 120%; /* Aumenta el tamaño de las letras */
+        line-height: 1.6; /* Aumenta la separación entre líneas */
+    }
+
+    .social-icons {
+        margin-top: 15px; /* Espaciado adicional entre el texto y los íconos */
+    }
+
+    .social-icons a {
+        margin: 0 15px; /* Espaciado entre los íconos */
+        display: inline-block;
+    }
+
+    .social-icons img {
+        width: 28px; /* Tamaño de los íconos */
+        height: 28px;
+        filter: brightness(0) invert(1); /* Asegura que los íconos sean visibles en el fondo oscuro */
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+        transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
+    }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    /* Estilos para monitores grandes */
+    #titulo {
+        color: #2e0b37;
+        font-weight: bolder;
+        overflow: visible;
+        width: 76%;
+        max-width: 1450px;
+        border-radius: 100px;
+        font-family: 'Dalfitra';
+        font-size: 85%;
+        position: fixed;
+        padding: 2.8% 2.3% 2.3% 23%;
+        z-index: 999;
+    }
+
+    #menu-icon {
+        display: none; /* Oculta el ícono del menú */
+    }
+
+    #menu-items {
+        display: grid; /* Muestra los botones en un diseño de cuadrícula */
+        grid-template-columns: repeat(6, 1fr); /* Ajusta el diseño de los botones en filas */
+        padding: 0.5% 4% 0.5% 7%;
+    }
+
+
+    #botones{
+        max-width: 100%;
+        background-color: #e5a000;
+        border-radius: 50px; 
+    }
+
+    #botones a.button {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-family: 'Dalfitra';
+        font-weight: bolder;
+        font-size: 120%;
+        color: #2e0b37;
+        max-width: 100%;
+        margin: 2% 3% 2% 3%;
+        text-decoration: none;
+        border-radius: 5% 5%;
+    }
+
+    #botones a.button:hover {
+        background-color: #ffbf47;
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+        filter: brightness(1.2);
+    }
+
+    #hdad {
+        display: flex;
+        align-items: center;
+        overflow: visible; /* Evita restricciones */
+        background-color: #2e0b37;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 1);
+        border-radius: 50px; 
+        position: fixed;
+        top: 0;
+        width: 90%; 
+        max-width: 25%; 
+        padding: 0% 1%; 
+        margin: 1% 1%;
+        z-index: 999;
+    }
+
+    .logo {
+        max-width: 40%;
+        height: auto;
+        margin-right: 5%; 
+    }
+
+    #descripcion{
+        color: #e5a000;
+        font-size: 65%;
+        font-weight: bold;
+        padding: 1%;
+        border-radius: 20%; 
+        max-width: 70%; 
+    }
+
+    #informe {
+        display: flex;
+        color: #e5a000;
+        padding: 16% 15px 15px 15px;
+        gap: 20px; /* Espaciado entre las columnas */
+    }
+
+    .info {
+        flex: 2; /* Ocupa más espacio (2 partes) */
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        padding: 15px;
+    }
+
+    .titulohdad{
+        font-size:180%;
+    }
+
+    .recorrido {
+        flex: 1; /* Ocupa menos espacio (1 parte) */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente los elementos */
+        align-items: center; /* Centra horizontalmente los elementos */
+        text-align: center; /* Asegura que el texto esté centrado */
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px ;
+    }  
+
+    #informe2 {
+        display: flex; /* Configura un diseño en fila */
+        justify-content: space-between; /* Espacia los elementos uniformemente */
+        align-items: center; /* Centra verticalmente los elementos */
+        gap: 20px; /* Espaciado entre los elementos */
+        padding: 20px;
+    }
+
+    #recuadromapa {
+        background-color: #2e0b37;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+        height: 635px;
+        width: 50%; /* Ajusta el ancho para que ocupe menos espacio */
+        border-radius: 2%;
+    }
+
+    #mapa {
+        margin: 0.5%;
+        border-radius: 2%;
+    }
+
+    .video {
+        display: flex; /* Habilita flexbox para centrar el contenido */
+        justify-content: center; /* Centra horizontalmente el iframe */
+        align-items: center; /* Centra verticalmente el iframe */
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        height: 620px; /* Igual altura que el mapa */
+        width: 50%; /* Ajusta el ancho para que ocupe menos espacio */
+        border-radius: 2%;
+        padding: 6px; /* Espaciado interno */
+    }
+
+    .video iframe {
+        width: 100%; /* Ajusta el ancho del iframe */
+        height: 100%; /* Ajusta la altura del iframe */
+        border-radius: 1%;
+    }
+
+    #footer {
+        background-color: #2e0b37; /* Color de fondo del footer */
+        color: #e5a000; /* Color del texto */
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        border-top: 2px solid #e5a000;
+    }
+
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .footer-content p {
+        margin: 10px 0; /* Espaciado entre líneas */
+        font-size: 120%; /* Aumenta el tamaño de las letras */
+        line-height: 1.6; /* Aumenta la separación entre líneas */
+    }
+
+    .social-icons {
+        margin-top: 15px; /* Espaciado adicional entre el texto y los íconos */
+    }
+
+    .social-icons a {
+        margin: 0 15px; /* Espaciado entre los íconos */
+        display: inline-block;
+    }
+
+    .social-icons img {
+        width: 28px; /* Tamaño de los íconos */
+        height: 28px;
+        filter: brightness(0) invert(1); /* Asegura que los íconos sean visibles en el fondo oscuro */
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+        transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Ajustes para pantallas medianas */
+    #titulo {
+        color: #2e0b37;
+        font-weight: bolder;
+        overflow: visible;
+        width: 76%;
+        max-width: 1450px;
+        border-radius: 100px;
+        font-family: 'Dalfitra';
+        font-size: 70%;
+        position: fixed;
+        padding: 3% 2.3% 2.3% 23%;
+        z-index: 999;
+    }
+
+    #menu-icon {
+        display: none; /* Oculta el ícono del menú */
+    }
+
+    #menu-items {
+        display: grid; /* Muestra los botones en un diseño de cuadrícula */
+        grid-template-columns: repeat(6, 1fr); /* Ajusta el diseño de los botones en filas */
+        padding: 0.5% 4% 0.5% 15%;
+    }
+
+    #botones {
+
+        max-width: 100%;
+        background-color: #e5a000;
+        border-radius: 50px;
+    }
+
+    #botones a.button {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-family: 'Dalfitra';
+        font-weight: bolder;
+        font-size: 120%;
+        color: #2e0b37;
+        max-width: 100%;
+        margin: 2% 3% 2% 3%;
+        text-decoration: none;
+        border-radius: 5% 5%;
+    }
+
+    #botones a.button:hover {
+        background-color: #ffbf47;
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+        filter: brightness(1.2);
+    }
+
+    #hdad {
+        display: flex;
+        align-items: center;
+        overflow: visible; /* Evita restricciones */
+        background-color: #2e0b37;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 1);
+        border-radius: 50px; 
+        position: fixed;
+        top: 0;
+        width: 90%; 
+        max-width: 30%; 
+        padding: 0% 1%; 
+        margin: 1% 1%;
+        z-index: 999;
+    }
+
+    .logo {
+        max-width: 30%;
+        height: auto;
+        margin-right: 5%; 
+    }
+
+    #descripcion{
+        color: #e5a000;
+        font-size: 65%;
+        font-weight: bold;
+        padding: 1%;
+        border-radius: 20%; 
+        max-width: 70%; 
+    }
+
+    #informe {
+        display: flex;
+        color: #e5a000;
+        padding: 16% 15px 15px 15px;
+    }
+
+    .info {
+        flex: 2; /* Ocupa más espacio (2 partes) */
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        padding: 15px;
+    }
+
+    .titulohdad{
+        font-size:180%;
+    }
+
+    .recorrido {
+        flex: 1; /* Ocupa menos espacio (1 parte) */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente los elementos */
+        align-items: center; /* Centra horizontalmente los elementos */
+        text-align: center; /* Asegura que el texto esté centrado */
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px ;
+    }  
+
+    #informe2 {
+        display: flex; /* Configura un diseño en fila */
+        justify-content: space-between; /* Espacia los elementos uniformemente */
+        align-items: center; /* Centra verticalmente los elementos */
+        gap: 20px; /* Espaciado entre los elementos */
+        padding: 20px;
+    }
+
+    #recuadromapa {
+        background-color: #2e0b37;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+        height: 615px;
+        width: 50%; /* Ajusta el ancho para que ocupe menos espacio */
+        border-radius: 2%;
+    }
+
+    #mapa {
+        margin: 0.5%;
+        border-radius: 2%;
+    }
+
+    .video {
+        display: flex; /* Habilita flexbox para centrar el contenido */
+        justify-content: center; /* Centra horizontalmente el iframe */
+        align-items: center; /* Centra verticalmente el iframe */
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        height: 600px; /* Igual altura que el mapa */
+        width: 50%; /* Ajusta el ancho para que ocupe menos espacio */
+        border-radius: 2%;
+        padding: 6px; /* Espaciado interno */
+    }
+
+    .video iframe {
+        width: 100%; /* Ajusta el ancho del iframe */
+        height: 100%; /* Ajusta la altura del iframe */
+        border-radius: 1%;
+    }
+
+    #footer {
+        background-color: #2e0b37; /* Color de fondo del footer */
+        color: #e5a000; /* Color del texto */
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        border-top: 2px solid #e5a000;
+    }
+
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .footer-content p {
+        margin: 10px 0; /* Espaciado entre líneas */
+        font-size: 120%; /* Aumenta el tamaño de las letras */
+        line-height: 1.6; /* Aumenta la separación entre líneas */
+    }
+
+    .social-icons {
+        margin-top: 15px; /* Espaciado adicional entre el texto y los íconos */
+    }
+
+    .social-icons a {
+        margin: 0 15px; /* Espaciado entre los íconos */
+        display: inline-block;
+    }
+
+    .social-icons img {
+        width: 28px; /* Tamaño de los íconos */
+        height: 28px;
+        filter: brightness(0) invert(1); /* Asegura que los íconos sean visibles en el fondo oscuro */
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+        transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Estilos para tablets y dispositivos medianos */
+    #titulo {
+        color: #2e0b37;
+        font-weight: bolder;
+        overflow: visible;
+        width: 96%;
+        border-radius: 100px;
+        font-family: 'Dalfitra';
+        font-size: 50%;
+        position: fixed;
+        padding: 0% 0% 2% 2%;
+        z-index: 999;
+    }
+
+    #botones {
+        position: relative;
+    }
+
+    #menu-icon {
+        display: inline-flex; /* Asegura que el contenido esté en una sola línea */
+        align-items: center; /* Centra verticalmente el texto y el ícono */
+        font-size: 24px; /* Tamaño del texto */
+        color: #2e0b37; /* Color del texto */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+        margin-top: -5%;
+        padding: 8% 15px 1% 15px; /* Espaciado interno */
+        background-color: #e5a000; /* Fondo del contenedor */
+        border-radius: 5px; /* Bordes redondeados */
+        white-space: nowrap; /* Evita que el texto se envuelva */
+        width: auto; /* Ajusta el ancho automáticamente */
+        text-align: center; /* Centra el texto */
+    }   
+
+    #menu-items {
+        display: none; /* Oculta los botones inicialmente */
+        position: absolute;
+        top: 55px; /* Ajusta la posición del menú desplegable */
+        left: 0;
+        background-color: #e5a000;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    #menu-items a.button {
+        display: block; /* Alinea los botones en una columna */
+        margin: 10% 0;
+        font-size: 14px;
+        color: #2e0b37;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    #menu-items a.button:hover {
+        background-color: #ffbf47;
+    }
+
+    #botones{
+        max-width: 100%;
+        border-radius: 50px; 
+        margin-top: 15%;
+        padding: 0.5% 0% 0.5% 0%;
+    }
+
+    #hdad {
+        display: flex;
+        align-items: center;
+        overflow: visible; /* Evita restricciones */
+        background-color: #2e0b37;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 1);
+        border-radius: 50px; 
+        position: fixed;
+        top: 0;
+        width: 96%; 
+        max-width: 100%; 
+        padding: 0% 1%; 
+        margin: 1% 1%;
+        z-index: 999;
+    }
+
+    .logo {
+        max-width: 15%;
+        height: auto;
+        margin-right: 5%; 
+    }
+
+    #descripcion{
+        color: #e5a000;
+        font-size: 55%;
+        font-weight: bold;
+        padding: 1%;
+        border-radius: 20%; 
+        max-width: 70%; 
+    }
+
+    #informe {
+        color: #e5a000;
+        padding: 30% 15px 1% 15px;
+    }
+
+    .info {
+         /* Ocupa más espacio (2 partes) */
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        padding: 15px;
+    }
+
+    .titulohdad{
+        font-size:130%;
+    }
+
+    .recorrido {
+        flex: 1; /* Ocupa menos espacio (1 parte) */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente los elementos */
+        align-items: center; /* Centra horizontalmente los elementos */
+        text-align: center; /* Asegura que el texto esté centrado */
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px ;
+    }  
+
+    #informe2 {
+        justify-content: space-between; /* Espacia los elementos uniformemente */
+        align-items: center; /* Centra verticalmente los elementos */
+        gap: 20px; /* Espaciado entre los elementos */
+        padding: 20px;
+    }
+
+    #recuadromapa {
+        background-color: #2e0b37;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+        height: 690px;
+        width: 100%; /* Ajusta el ancho para que ocupe menos espacio */
+        border-radius: 2%;
+        margin-bottom: 10%;
+    }
+
+    #mapa {
+        margin: 0.5%;
+        border-radius: 2%;
+    }
+
+    .video {
+        display: flex; /* Habilita flexbox para centrar el contenido */
+        justify-content: center; /* Centra horizontalmente el iframe */
+        align-items: center; /* Centra verticalmente el iframe */
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        height: 240px; /* Igual altura que el mapa */
+        width: 98%; /* Ajusta el ancho para que ocupe menos espacio */
+        border-radius: 2%;
+        padding: 6px; /* Espaciado interno */
+    }
+
+    .video iframe {
+        width: 100%; /* Ajusta el ancho del iframe */
+        height: 100%; /* Ajusta la altura del iframe */
+        border-radius: 1%;
+    }
+
+    #footer {
+        background-color: #2e0b37; /* Color de fondo del footer */
+        color: #e5a000; /* Color del texto */
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        border-top: 2px solid #e5a000;
+    }
+
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .footer-content p {
+        margin: 10px 0; /* Espaciado entre líneas */
+        font-size: 120%; /* Aumenta el tamaño de las letras */
+        line-height: 1.6; /* Aumenta la separación entre líneas */
+    }
+
+    .social-icons {
+        margin-top: 15px; /* Espaciado adicional entre el texto y los íconos */
+    }
+
+    .social-icons a {
+        margin: 0 15px; /* Espaciado entre los íconos */
+        display: inline-block;
+    }
+
+    .social-icons img {
+        width: 28px; /* Tamaño de los íconos */
+        height: 28px;
+        filter: brightness(0) invert(1); /* Asegura que los íconos sean visibles en el fondo oscuro */
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+        transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
+    }
+}
+
+@media (min-width: 376px) and (max-width: 480px) {
+    /* Estilos específicos para móviles*/
+    #titulo {
+        color: #2e0b37;
+        font-weight: bolder;
+        overflow: visible;
+        width: 96%;
+        border-radius: 100px;
+        font-family: 'Dalfitra';
+        font-size: 50%;
+        position: fixed;
+        padding: 4% 0% 2% 2%;
+        z-index: 999;
+    }
+
+    #botones {
+        position: relative;
+    }
+
+    #menu-icon {
+        display: inline-flex; /* Asegura que el contenido esté en una sola línea */
+        align-items: center; /* Centra verticalmente el texto y el ícono */
+        font-size: 250%; /* Tamaño del texto */
+        color: #2e0b37; /* Color del texto */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+        margin-top: -5%;
+        padding: 10% 15px 1% 15px; /* Espaciado interno */
+        background-color: #e5a000; /* Fondo del contenedor */
+        border-radius: 5px; /* Bordes redondeados */
+        white-space: nowrap; /* Evita que el texto se envuelva */
+        width: auto; /* Ajusta el ancho automáticamente */
+        text-align: center; /* Centra el texto */
+    }   
+
+    #menu-items {
+        display: none; /* Oculta los botones inicialmente */
+        position: absolute;
+        top: 50px; /* Ajusta la posición del menú desplegable */
+        left: 0;
+        background-color: #e5a000;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    #menu-items a.button {
+        display: block; /* Alinea los botones en una columna */
+        margin: 10% 0;
+        font-size: 14px;
+        color: #2e0b37;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    #menu-items a.button:hover {
+        background-color: #ffbf47;
+    }
+
+    #botones{
+        max-width: 100%;
+        border-radius: 50px; 
+        margin-top: 15%;
+        padding: 0.5% 0% 0.5% 0%;
+    }
+
+    #hdad {
+        display: flex;
+        align-items: center;
+        overflow: visible; /* Evita restricciones */
+        background-color: #2e0b37;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 1);
+        border-radius: 50px; 
+        position: fixed;
+        top: 0;
+        width: 96%; 
+        max-width: 100%; 
+        padding: 0% 1%; 
+        margin: 1% 1%;
+        z-index: 999;
+    }
+
+    .logo {
+        max-width: 15%;
+        height: auto;
+        margin-right: 5%; 
+    }
+
+    #descripcion{
+        color: #e5a000;
+        font-size: 55%;
+        font-weight: bold;
+        padding: 1%;
+        border-radius: 20%; 
+        max-width: 70%; 
+    }
+
+    #informe {
+        color: #e5a000;
+        padding: 30% 15px 1% 15px;
+    }
+
+    .info {
+         /* Ocupa más espacio (2 partes) */
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        padding: 15px;
+    }
+
+    .titulohdad{
+        font-size:130%;
+    }
+
+    .recorrido {
+        flex: 1; /* Ocupa menos espacio (1 parte) */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente los elementos */
+        align-items: center; /* Centra horizontalmente los elementos */
+        text-align: center; /* Asegura que el texto esté centrado */
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px ;
+    }  
+
+    #informe2 {
+        justify-content: space-between; /* Espacia los elementos uniformemente */
+        align-items: center; /* Centra verticalmente los elementos */
+        gap: 20px; /* Espaciado entre los elementos */
+        padding: 20px;
+    }
+
+    #recuadromapa {
+        background-color: #2e0b37;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+        height: 690px;
+        width: 100%; /* Ajusta el ancho para que ocupe menos espacio */
+        border-radius: 2%;
+        margin-bottom: 10%;
+    }
+
+    #mapa {
+        margin: 0.5%;
+        border-radius: 2%;
+    }
+
+    .video {
+        display: flex; /* Habilita flexbox para centrar el contenido */
+        justify-content: center; /* Centra horizontalmente el iframe */
+        align-items: center; /* Centra verticalmente el iframe */
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        height: 210px; /* Igual altura que el mapa */
+        width: 98%; /* Ajusta el ancho para que ocupe menos espacio */
+        border-radius: 2%;
+        padding: 6px; /* Espaciado interno */
+    }
+
+    .video iframe {
+        width: 100%; /* Ajusta el ancho del iframe */
+        height: 100%; /* Ajusta la altura del iframe */
+        border-radius: 1%;
+    }
+
+    #footer {
+        background-color: #2e0b37; /* Color de fondo del footer */
+        color: #e5a000; /* Color del texto */
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        border-top: 2px solid #e5a000;
+    }
+
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .footer-content p {
+        margin: 10px 0; /* Espaciado entre líneas */
+        font-size: 120%; /* Aumenta el tamaño de las letras */
+        line-height: 1.6; /* Aumenta la separación entre líneas */
+    }
+
+    .social-icons {
+        margin-top: 15px; /* Espaciado adicional entre el texto y los íconos */
+    }
+
+    .social-icons a {
+        margin: 0 15px; /* Espaciado entre los íconos */
+        display: inline-block;
+    }
+
+    .social-icons img {
+        width: 28px; /* Tamaño de los íconos */
+        height: 28px;
+        filter: brightness(0) invert(1); /* Asegura que los íconos sean visibles en el fondo oscuro */
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+        transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
+    }
+}
+
+@media (max-width: 375px) {
+    /* Estilos específicos para móviles*/
+    #titulo {
+        color: #2e0b37;
+        font-weight: bolder;
+        overflow: visible;
+        width: 96%;
+        border-radius: 100px;
+        font-family: 'Dalfitra';
+        font-size: 50%;
+        position: fixed;
+        padding: 7% 0% 2% 2%;
+        z-index: 999;
+    }
+
+    #botones {
+        position: relative;
+    }
+
+    #menu-icon {
+        display: inline-flex; /* Asegura que el contenido esté en una sola línea */
+        align-items: center; /* Centra verticalmente el texto y el ícono */
+        font-size: 220%; /* Tamaño del texto */
+        color: #2e0b37; /* Color del texto */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+        margin-top: -5%;
+        padding: 10% 15px 1% 15px; /* Espaciado interno */
+        background-color: #e5a000; /* Fondo del contenedor */
+        border-radius: 5px; /* Bordes redondeados */
+        white-space: nowrap; /* Evita que el texto se envuelva */
+        width: auto; /* Ajusta el ancho automáticamente */
+        text-align: center; /* Centra el texto */
+    }   
+
+    #menu-items {
+        display: none; /* Oculta los botones inicialmente */
+        position: absolute;
+        top: 45px; /* Ajusta la posición del menú desplegable */
+        left: 0;
+        background-color: #e5a000;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    #menu-items a.button {
+        display: block; /* Alinea los botones en una columna */
+        margin: 4% 0;
+        font-size: 12px;
+        color: #2e0b37;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    #menu-items a.button:hover {
+        background-color: #ffbf47;
+    }
+
+    #botones{
+        max-width: 100%;
+        border-radius: 50px; 
+        margin-top: 15%;
+        padding: 0.5% 0% 0.5% 0%;
+    }
+
+    #hdad {
+        display: flex;
+        align-items: center;
+        overflow: visible; /* Evita restricciones */
+        background-color: #2e0b37;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 1);
+        border-radius: 50px; 
+        position: fixed;
+        top: 0;
+        width: 96%; 
+        max-width: 100%; 
+        padding: 0% 1%; 
+        margin: 1% 1%;
+        z-index: 999;
+    }
+
+    .logo {
+        max-width: 15%;
+        height: auto;
+        margin-right: 5%; 
+    }
+
+    #descripcion{
+        color: #e5a000;
+        font-size: 55%;
+        font-weight: bold;
+        padding: 1%;
+        border-radius: 20%; 
+        max-width: 70%; 
+    }
+
+    #informe {
+        color: #e5a000;
+        padding: 30% 15px 1% 15px;
+    }
+
+    .info {
+         /* Ocupa más espacio (2 partes) */
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        padding: 15px;
+    }
+
+    .titulohdad{
+        font-size:130%;
+    }
+
+    .recorrido {
+        flex: 1; /* Ocupa menos espacio (1 parte) */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente los elementos */
+        align-items: center; /* Centra horizontalmente los elementos */
+        text-align: center; /* Asegura que el texto esté centrado */
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px ;
+    }  
+
+    #informe2 {
+        justify-content: space-between; /* Espacia los elementos uniformemente */
+        align-items: center; /* Centra verticalmente los elementos */
+        gap: 20px; /* Espaciado entre los elementos */
+        padding: 20px;
+    }
+
+    #recuadromapa {
+        background-color: #2e0b37;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+        height: 690px;
+        width: 100%; /* Ajusta el ancho para que ocupe menos espacio */
+        border-radius: 2%;
+        margin-bottom: 10%;
+    }
+
+    #mapa {
+        margin: 0.5%;
+        border-radius: 2%;
+    }
+
+    .video {
+        display: flex; /* Habilita flexbox para centrar el contenido */
+        justify-content: center; /* Centra horizontalmente el iframe */
+        align-items: center; /* Centra verticalmente el iframe */
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        height: 185px; /* Igual altura que el mapa */
+        width: 98%; /* Ajusta el ancho para que ocupe menos espacio */
+        border-radius: 2%;
+        padding: 6px; /* Espaciado interno */
+    }
+
+    .video iframe {
+        width: 100%; /* Ajusta el ancho del iframe */
+        height: 100%; /* Ajusta la altura del iframe */
+        border-radius: 1%;
+    }
+
+    #footer {
+        background-color: #2e0b37; /* Color de fondo del footer */
+        color: #e5a000; /* Color del texto */
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        border-top: 2px solid #e5a000;
+    }
+
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .footer-content p {
+        margin: 10px 0; /* Espaciado entre líneas */
+        font-size: 120%; /* Aumenta el tamaño de las letras */
+        line-height: 1.6; /* Aumenta la separación entre líneas */
+    }
+
+    .social-icons {
+        margin-top: 15px; /* Espaciado adicional entre el texto y los íconos */
+    }
+
+    .social-icons a {
+        margin: 0 15px; /* Espaciado entre los íconos */
+        display: inline-block;
+    }
+
+    .social-icons img {
+        width: 28px; /* Tamaño de los íconos */
+        height: 28px;
+        filter: brightness(0) invert(1); /* Asegura que los íconos sean visibles en el fondo oscuro */
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+        transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
+    }
+}
+
+
+</style>
+
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const menuItems = document.getElementById('menu-items');
+
+    // Verifica si el rango de pantalla es entre 481px y 768px
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+    if (menuIcon && menuItems && mediaQuery.matches) {
+        menuIcon.addEventListener('click', () => {
+            if (menuItems.style.display === 'block') {
+                menuItems.style.display = 'none';
+            } else {
+                menuItems.style.display = 'block';
+            }
+        });
+    }
+
+</script>
+
+</Layout>

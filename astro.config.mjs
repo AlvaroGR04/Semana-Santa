@@ -9,6 +9,8 @@ export default defineConfig({
   integrations: [react()],
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    assetsInclude: ['**/*.jpg'], // 🔥 Forzar la importación de archivos .jpg
   }
 });
+

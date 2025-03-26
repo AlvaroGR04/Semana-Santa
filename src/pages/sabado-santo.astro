@@ -1,0 +1,259 @@
+---
+import Layout from '../layouts/Layout.astro';
+import background from '../assets/background.svg';
+import '../styles/global.css';
+import { getCollection } from 'astro:content';
+import { ClientRouter } from 'astro:transitions';
+
+const sabadosanto = await getCollection ('sabadosanto');
+console.log(sabadosanto)
+
+---
+
+<Layout title='Cofrades de la Calle'>
+    <div id="titulo">
+        <header> 
+            <a href="/" id="back-button" aria-label="Volver a la página principal">
+                <p><strong>◀</strong></p>
+            </a>
+            <h1>COFRADIAS DE LA CALLE</h1>
+        </header>
+    </div>
+    <div id="container">
+        <img id="background" src={background.src} alt="" fetchpriority="high" />
+    </div>
+    <section aria-label="Hermandades del Lunes Santo">
+        <div class="hermandades">
+            {
+                sabadosanto.map(sabadosanto => {
+                    const {id, data} = sabadosanto
+                    const { img, title , date , nombrehdad, descripcion, iglesia , hermanos, nazarenos, tiempo_en_ver, tiempo_recorrido, tunicas, cera, pasos, bandas, capataces , iframeURL, videoURL
+                    } = data
+
+                    return (
+                        <article id="hermandad">
+                            <a href={`/hermandades/${id}`} class="hermandad-link">
+                                <img
+                                    transition:name={`img-${img}$`}
+                                    src={`/${img}`} 
+                                    alt={title} 
+                                    class="logo" 
+                                />
+                            
+                                <div id="descripcion">
+                                    <h3 class="titulohdad">{title}</h3>
+                                    <h5 class="iglesiahdad">{iglesia}</h5>
+                                </div>
+                            </a>
+                        </article>
+
+                    )
+                })
+            }
+        </div>
+    </section>
+<style>
+    #background {
+        background-color: #2e0b37;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    #titulo {
+        background-color: #e5a000;
+        color: #2e0b37;
+        font-weight: bolder;
+        width: 80%;
+        max-width: 600px;
+        margin: 30px auto -10px auto;
+        padding: 10px 10px 2px;
+        border-radius: 100px;
+        text-align: center;
+        font-family: 'Dalfitra';
+        font-size: 180%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* Para posicionar el botón de "atrás" */
+    }
+
+    #back-button {
+        position: absolute;
+        left: 20px; /* Ajusta la posición del botón */
+        top: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color:#e5a000;
+        border-radius: 50%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    #back-button p {
+        margin-top: 22%; 
+        margin-right: 10%;
+        font-size: 100%; /* Ajusta el tamaño del texto */
+        color: #2e0b37; /* Asegura que el texto sea visible */
+        text-align: center; /* Centra el texto dentro del párrafo */
+    }
+
+    #back-button:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+        filter: brightness(1.1);
+    }
+
+    .hermandades {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        gap: 10% 2% ; /* Espaciado entre artículos */
+        padding: 4% 1.5% 10px 30px;
+    
+    }
+
+    #hermandad {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: flex;
+        align-items: center;
+        background-color: #2e0b37;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 1);
+        border-radius: 100px;
+        transition: transform 0.3s ease, background-color 0.3s ease; /* Transición suave */
+    }
+
+    #hermandad:hover {;
+        
+        transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+        box-shadow: 0px 15px 60px rgba(0, 0, 0, 1); /* Aumenta la sombra */
+    }
+
+    #hermandad:active{
+        transform: scale(0.95) rotateZ(-1.7deg); /* Aumenta ligeramente el tamaño */
+    }
+
+    .hermandad-link {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-decoration: none; /* Elimina el subrayado del enlace */
+    }
+
+    .hermandad-link:hover .logo {
+        filter: brightness(1.2); /* Aumenta el brillo del logo al pasar el cursor */
+    }
+
+    .logo {
+        max-width: 32%;
+        transition: filter 0.3s ease; /* Transición suave para el brillo */
+    }
+
+    #descripcion{
+        color: #e5a000;
+        font-size: 110%;
+        font-weight: bolder;
+        
+    }
+
+/* Pantallas medianas (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #titulo {
+        font-size: 140%; /* Reduce el tamaño del texto */
+        margin: 20px auto 10px auto; /* Ajusta el margen */
+        padding: 18px 10px; /* Aumenta el padding */
+    }
+
+    #back-button {
+        left: 12px; /* Ajusta la posición del botón */
+        top: 50%; /* Centra verticalmente */
+        transform: translateY(-50%);
+    }
+
+    .hermandades {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        gap: 18px; /* Espaciado entre los elementos */
+        padding: 18px;
+    }
+}
+
+/* Pantallas pequeñas (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    #titulo {
+        font-size: 120%; /* Reduce el tamaño del texto */
+        margin: 15px auto 10px auto; /* Ajusta el margen */
+        padding: 15px 8px; /* Ajusta el padding */
+    }
+
+    #back-button {
+        left: 10px; /* Ajusta la posición del botón */
+        top: 50%; /* Centra verticalmente */
+        transform: translateY(-50%);
+    }
+
+    .hermandades {
+        display: flex;
+        flex-direction: column; /* Elementos en una sola columna */
+        gap: 15px; /* Espaciado entre los elementos */
+        padding: 15px;
+    }
+}
+
+/* Pantallas muy pequeñas (376px a 480px) */
+@media (min-width: 376px) and (max-width: 480px) {
+    #titulo {
+        font-size: 100%; /* Reduce el tamaño del texto */
+        margin: 10px auto 8px auto; /* Ajusta el margen */
+        padding: 12px 8px; /* Ajusta el padding */
+    }
+
+    #back-button {
+        left: 8px; /* Ajusta la posición del botón */
+        top: 50%; /* Centra verticalmente */
+        transform: translateY(-50%);
+    }
+
+    .hermandades {
+        display: flex;
+        flex-direction: column; /* Elementos en una sola columna */
+        gap: 10px; /* Espaciado entre los elementos */
+        padding: 10px;
+    }
+}
+
+/* Pantallas extra pequeñas (menores a 375px) */
+@media (max-width: 375px) {
+    #titulo {
+        font-size: 90%; /* Reduce aún más el tamaño del texto */
+        margin: 8px auto 5px auto; /* Ajusta el margen */
+        padding: 10px 5px; /* Ajusta el padding */
+    }
+
+    #back-button {
+        left: 5px; /* Ajusta la posición del botón */
+        top: 50%; /* Centra verticalmente */
+        transform: translateY(-50%);
+    }
+
+    .hermandades {
+        display: flex;
+        flex-direction: column; /* Elementos en una sola columna */
+        gap: 8px; /* Espaciado entre los elementos */
+        padding: 8px;
+    }
+}
+</style>
+
+<script>
+
+</script>
+
+
+
+
+</Layout>

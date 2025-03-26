@@ -1,1 +1,12 @@
 @import "tailwindcss";
+@font-face {
+    font-family: 'MiFuente';
+    src:url('/semana-santa-frontend/public/fonts/dalfitra.otf') format('opentype'),
+        url('/semana-santa-frontend/public/fonts/dalfitra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    body {
+    font-family: 'MiFuente', sans-serif;
+}

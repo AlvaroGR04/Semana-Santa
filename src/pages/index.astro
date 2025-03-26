@@ -1,11 +1,331 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import background from '../assets/background.svg';
+import '../styles/global.css';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Datos de los botones
+const botones = [
+    { nombre: "VIERNES DE DOLORES", texto: "", imagen: "../../public/assets/viernesdolores.jpg", url: "/viernes-dolores" },
+    { nombre: "SABADO DE PASION", texto: "", imagen: "../../public/assets/sabadopasion.jpg", url: "/sabado-pasion" },
+    { nombre: "DOMINGO DE RAMOS", texto: "", imagen: "../../public/assets/domingoramos.jpg", url: "/domingo-ramos" },
+    { nombre: "LUNES SANTO", texto: "", imagen: "../../public/assets/lunesanto.jpg", url: "/lunes-santo" },
+    { nombre: "MARTES SANTO", texto: "", imagen: "../../public/assets/martessanto.jpg", url: "/martes-santo" },
+    { nombre: "MIERCOLES SANTO", texto: "", imagen: "../../public/assets/miercolessanto.jpg", url: "/miercoles-santo" },
+    { nombre: "JUEVES SANTO", texto: "", imagen: "../../public/assets/juevessanto.jpg", url: "/jueves-santo" },
+    { nombre: "MADRUGADA", texto: "", imagen: "../../public/assets/madrugada.jpg", url: "/madrugada" },
+    { nombre: "VIERNES SANTO", texto: "", imagen: "../../public/assets/viernessanto.jpg", url: "/viernes-santo" },
+    { nombre: "SABADO SANTO", texto: "", imagen: "../../public/assets/sabadosanto_resurrecion.jpg", url: "/sabado-santo" },
+    { nombre: "DOMINGO DE RESURRECCION", texto: "", imagen: "../../public/assets/sabadosanto_resurrecion.jpg", url: "/domingo-resurrecion" }
+];
 ---
 
-<Layout>
-	<Welcome />
+<Layout title='Cofrades de la Calle'>
+    <div id="titulo">
+        <header>
+            <h1>COFRADIAS DE LA CALLE</h1>
+        </header>
+    </div>
+    <div id="container">
+        <img id="background" src={background.src} alt="" fetchpriority="high" />
+        <main>
+        <section id="botones">
+            {botones.map((boton, index) => (
+            <a class="button" href={boton.url} id={`boton-${index}`} 
+                data-text={boton.texto} 
+                data-imagen={boton.imagen}>
+                {boton.nombre}
+            </a>
+            ))}
+        </section>
+    
+        <!-- Contenedor para mostrar el texto y la imagen a la derecha -->
+        <div id="contenido" style="display: none;">
+            <p id="texto">Pasa el mouse sobre un botón para ver más información.</p>
+            <img id="imagen" src="" alt="Imagen descriptiva" />
+        </div>
+        </main>
+    </div>
+
+<style>
+    #background {
+    background-color: #2e0b37;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    }
+
+    #titulo {
+    background-color: #e5a000;
+    color: #2e0b37;
+    font-weight: bolder;
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto -10px auto;
+    padding: 10px 10px 2px;
+    border-radius: 100px;
+    text-align: center;
+    font-family: 'Dalfitra';
+    font-size: 180%;
+    }
+
+    #botones {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+
+    #botones a.button {
+    font-family: 'Dalfitra';
+    font-weight: bolder;
+    font-size: 150%;
+    color: #2e0b37;
+    background-color: #e5a000;
+    max-width: 18%;
+    margin: 1% 10% -1% 10%;
+    padding: 0.7% 0.3% 0.7% 0.3%;
+    border-radius: 40px 10px 40px 10px;
+    text-align: center;
+    text-decoration: none;
+    }
+
+    #botones a.button:hover {
+    background-color: #ffbf47;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    filter: brightness(1.2);
+    }
+
+    #contenido {
+    font-family: 'Dalfitra';
+    font-weight: bolder;
+    font-size: 150%;
+    text-align: center;
+    border-radius: 10px;
+    color: #2e0b37;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 13.5%;
+    left: 30%;
+    width: 65%;
+    height: 80%;
+    }
+    #contenido img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    }
+
+/* Pantallas grandes (1025px a 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #titulo {
+        font-size: 140%; /* Reduce ligeramente el tamaño del texto */
+        margin: 25px auto 15px auto; /* Ajusta el margen */
+        padding: 15px 10px; /* Ajusta el padding */
+    }
+
+    #botones {
+        display: grid; /* Usa grid para organizar los botones */
+        grid-template-columns: repeat(6, 1fr); /* 11 columnas */
+        gap: 10px; /* Espaciado entre los botones */
+        justify-content: center; /* Centra los botones horizontalmente */
+        padding: 20px;
+    }
+
+    #botones a.button {
+        font-size: 100%; /* Reduce el tamaño del texto */
+        max-width: 100%; /* Los botones ocupan todo el ancho de su columna */
+        padding: 15px 10px; /* Ajusta el padding para centrar el texto verticalmente */
+        text-align: center; /* Centra el texto horizontalmente */
+        display: flex; /* Usa flexbox para centrar el contenido */
+        align-items: center; /* Centra el texto verticalmente */
+        justify-content: center; /* Centra el texto horizontalmente */
+    }
+
+    #contenido {
+        display: block; /* Asegura que el contenido sea visible */
+        font-size: 120%; /* Ajusta el tamaño del texto */
+        width: 90%; /* Ajusta el ancho del contenedor */
+        left: 0%;
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        margin: 20px auto 0 auto; /* Centra el contenido y añade margen superior */
+        position: relative; /* Elimina la posición absoluta para que aparezca debajo */
+        padding: 15px; /* Añade padding interno */
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2); /* Suaviza la sombra */
+    }
+
+    #contenido img {
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border-radius: 10px; /* Mantiene los bordes redondeados */
+    }
+}
+
+/* Pantallas medianas (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #titulo {
+        font-size: 140%; /* Reduce ligeramente el tamaño del texto */
+        margin: 20px auto 10px auto; /* Ajusta el margen */
+        padding: 15px 10px; /* Ajusta el padding */
+    }
+
+    #botones {
+        display: grid; /* Usa grid para organizar los botones */
+        grid-template-columns: repeat(6, 1fr); /* 6 columnas */
+        gap: 15px; /* Espaciado entre los botones */
+        justify-content: center; /* Centra los botones horizontalmente */
+        padding: 20px;
+    }
+
+    #botones a.button {
+        font-size: 80%; /* Ajusta el tamaño del texto */
+        max-width: 100%; /* Los botones ocupan todo el ancho de su columna */
+        padding: 12px 8px; /* Ajusta el padding para centrar el texto verticalmente */
+        text-align: center; /* Centra el texto horizontalmente */
+        display: flex; /* Usa flexbox para centrar el contenido */
+        align-items: center; /* Centra el texto verticalmente */
+        justify-content: center; /* Centra el texto horizontalmente */
+    }
+
+    #contenido {
+        display: block; /* Asegura que el contenido sea visible */
+        font-size: 120%; /* Ajusta el tamaño del texto */
+        width: 80%; /* Ajusta el ancho del contenedor */
+        left: 0%;
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        margin: 20px auto 0 auto; /* Centra el contenido y añade margen superior */
+        position: relative; /* Elimina la posición absoluta para que aparezca debajo */
+        padding: 15px; /* Añade padding interno */
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2); /* Suaviza la sombra */
+    }
+
+    #contenido img {
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border-radius: 10px; /* Mantiene los bordes redondeados */
+    }
+}
+
+/* Pantallas pequeñas (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    #titulo {
+        font-size: 120%; /* Reduce el tamaño del texto */
+        margin: 15px auto 10px auto; /* Ajusta el margen */
+    }
+
+    #botones {
+        display: flex;
+        flex-direction: column; /* Elementos en una sola columna */
+        gap: 10px; /* Espaciado entre los botones */
+        padding: 10px;
+    }
+
+    #botones a.button {
+        font-size: 110%; /* Ajusta el tamaño del texto */
+        max-width: 90%; /* Ajusta el ancho de los botones */
+        padding: 8px;
+    }
+
+    #contenido {
+        display: none; /* Oculta el contenido en este rango */
+    }
+}
+
+/* Pantallas muy pequeñas (376px a 480px) */
+@media (min-width: 376px) and (max-width: 480px) {
+    #titulo {
+        font-size: 100%; /* Reduce el tamaño del texto */
+        margin: 10px auto 8px auto; /* Ajusta el margen */
+    }
+
+    #botones {
+        display: flex;
+        flex-direction: column; /* Elementos en una sola columna */
+        gap: 8px; /* Espaciado entre los botones */
+        padding: 8px;
+    }
+
+    #botones a.button {
+        font-size: 100%; /* Ajusta el tamaño del texto */
+        max-width: 95%; /* Ajusta el ancho de los botones */
+        padding: 6px;
+    }
+
+    #contenido {
+        display: none; /* Oculta el contenido en este rango */
+    }
+}
+
+/* Pantallas extra pequeñas (menores a 375px) */
+@media (max-width: 375px) {
+    #titulo {
+        font-size: 90%; /* Reduce aún más el tamaño del texto */
+        margin: 8px auto 5px auto; /* Ajusta el margen */
+    }
+
+    #botones {
+        display: flex;
+        flex-direction: column; /* Elementos en una sola columna */
+        gap: 5px; /* Espaciado entre los botones */
+        padding: 5px;
+    }
+
+    #botones a.button {
+        font-size: 90%; /* Ajusta el tamaño del texto */
+        max-width: 100%; /* Ajusta el ancho de los botones */
+        padding: 5px;
+    }
+
+    #contenido {
+        display: none; /* Oculta el contenido en este rango */
+    }
+}
+</style>
+
+<script>
+function mostrarContenido(event: MouseEvent) {
+    const botonElement = event.target as HTMLElement;
+    if (!botonElement) return;
+
+    const texto = botonElement.getAttribute('data-text') || "";
+    const imagen = botonElement.getAttribute('data-imagen') || "";
+
+    const contenidoDiv = document.getElementById('contenido');
+    const textoElement = document.getElementById('texto');
+    const imagenElement = document.getElementById('imagen') as HTMLImageElement;
+
+    // Verificar el tamaño de la pantalla
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 768) {
+        // Si la pantalla es menor o igual a 768px, no mostrar el contenido
+        if (contenidoDiv) contenidoDiv.style.display = 'none';
+        return;
+    }
+
+    if (contenidoDiv && textoElement && imagenElement) {
+        textoElement.innerText = texto;
+
+        if (imagen) {
+            imagenElement.src = imagen; 
+            imagenElement.style.display = 'block';
+        } else {
+            imagenElement.style.display = 'none'; 
+        }
+
+        contenidoDiv.style.display = 'block'; // Mostrar el contenido solo si el tamaño de pantalla es mayor a 768px
+    }
+}
+
+// Asignar el evento a los botones
+document.querySelectorAll('.button').forEach((boton) => {
+    boton.addEventListener('mouseover', (event) => mostrarContenido(event as MouseEvent));
+});
+</script>
+
+
+
+
 </Layout>
