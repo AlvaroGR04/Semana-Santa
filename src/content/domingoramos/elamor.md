@@ -1,5 +1,5 @@
 ---
-img: "/assets/DomingoDeRamosImagen/laborriquitayelamorlogo.png"
+img: "/assets/DomingoDeRamosImagen/elamorlogo.png"
 title: "Hermandad del Amor"
 date: "Fundación: 1508"
 nombrehdad: "Primitiva Archicofradía, Pontificia y Real Hermandad de Nazarenos de la Sagrada Entrada en Jerusalén, Santísimo Cristo del Amor, Nuestra Señora del Socorro y Santiago Apóstol"
