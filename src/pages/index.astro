@@ -262,10 +262,16 @@ const botones = [
 /* Pantallas extra pequeñas (menores a 375px) */
 @media (max-width: 375px) {
     #titulo {
-        font-size: 90%; /* Reduce aún más el tamaño del texto */
-        margin: 8px auto 5px auto; /* Ajusta el margen */
+        font-size: 130%; /* Reduce aún más el tamaño del texto */
+        margin: 14px auto 5px auto; /* Ajusta el margen */
     }
 
+    #titulo h1{
+        margin: 0px auto 8px auto;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
     #botones {
         display: flex;
         flex-direction: column; /* Elementos en una sola columna */
@@ -274,9 +280,9 @@ const botones = [
     }
 
     #botones a.button {
-        font-size: 90%; /* Ajusta el tamaño del texto */
-        max-width: 100%; /* Ajusta el ancho de los botones */
-        padding: 5px;
+        font-size: 110%; /* Ajusta el tamaño del texto */
+        max-width: 120%; /* Ajusta el ancho de los botones */
+        padding: 8px;
     }
 
     #contenido {

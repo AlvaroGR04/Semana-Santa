@@ -240,12 +240,55 @@ console.log(viernessanto)
         transform: translateY(-50%);
     }
 
+    #hermandad {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #2e0b37;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 1);
+        border-radius: 100px;
+        transition: transform 0.3s ease, background-color 0.3s ease; /* Transición suave */
+        max-height: 150px;
+    }
+    .hermandad-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none; /* Elimina el subrayado del enlace */
+        flex-direction: row; /* Alinea los elementos en una fila */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+
     .hermandades {
         display: flex;
         flex-direction: column; /* Elementos en una sola columna */
         gap: 8px; /* Espaciado entre los elementos */
         padding: 8px;
     }
+
+    .logo{
+        height: 105px;
+        object-fit: cover;
+
+    }
+    .imagecontainer {
+        width: 100px;
+        height: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: filter 0.3s ease; /* Transición suave para el brillo */
+    }
+
+    #descripcion{;
+        color: #e5a000;
+        font-size: 90%;
+        font-weight: bolder;
+        width: 245px;
+    }
+
 }
 </style>
 
